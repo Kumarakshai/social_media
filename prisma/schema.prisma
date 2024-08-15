@@ -116,6 +116,7 @@ model Story {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   expiresAt DateTime
+  img       String
   User      User?    @relation(fields: [userId], references: [id])
   userId    String?  @unique
 }
