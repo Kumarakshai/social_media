@@ -50,7 +50,7 @@ const StoryList = ({
 
     try {
       const createdStory = await addStory(img.secure_url);
-      setStoryList((prev) => [createdStory!, ...prev]);
+      //       setStoryList((prev) => [createdStory!, ...prev]);
       setImg(null);
     } catch (err) {}
   };
