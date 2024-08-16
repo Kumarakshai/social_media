@@ -6,7 +6,7 @@ import UserInfoCard from "./UserInfoCard";
 import UserMediaCard from "./UserMediaCard";
 import { Suspense } from "react";
 
-const RightMenu = ({ user }: { user: User }) => {
+const RightMenu = ({ user }: { user?: User }) => {
   return (
     <div className="flex flex-col gap-6">
       {user ? (
@@ -18,9 +18,7 @@ const RightMenu = ({ user }: { user: User }) => {
             <UserMediaCard user={user} />
           </Suspense>
         </>
-      ) : (
-        ""
-      )}
+      ) : null}
       <FriendRequests />
       <Birthdays />
       <Ad size="md" />
